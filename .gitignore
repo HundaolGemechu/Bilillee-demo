@@ -27,3 +27,8 @@ dist-ssr
 .env
 .env.local
 .env.*.local
+
+# Local agent/runtime files
+.agents/
+supabase/.temp/
+lint_report.txt
