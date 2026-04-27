@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300..800;1,300..800&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#8c1520",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#ffdad8",
+                    "secondary-fixed-dim": "#44dfab",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#ffb3b0",
+                    "on-surface": "#191c1d",
+                    "primary": "#ae2f34",
+                    "surface-bright": "#f8f9fa",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#00b179",
+                    "on-background": "#191c1d",
+                    "on-secondary-fixed": "#002116",
+                    "background": "#f8f9fa",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#006c48",
+                    "primary-fixed-dim": "#ffb3b0",
+                    "surface-tint": "#ae2f34",
+                    "tertiary-fixed": "#72fbbc",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-secondary-container": "#007354",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "on-tertiary-fixed": "#002113",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f3f4f5",
+                    "on-primary-fixed": "#410006",
+                    "on-primary": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "tertiary-fixed-dim": "#52dea2",
+                    "on-primary-container": "#6d0010",
+                    "surface-variant": "#e1e3e4",
+                    "primary-container": "#ff6b6b",
+                    "secondary-container": "#67fcc6",
+                    "outline": "#8c706f",
+                    "inverse-surface": "#2e3132",
+                    "secondary-fixed": "#67fcc6",
+                    "on-secondary-fixed-variant": "#00513a",
+                    "on-tertiary-fixed-variant": "#005236",
+                    "secondary": "#006c4f",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-surface-variant": "#584140",
+                    "surface-dim": "#d9dadb",
+                    "surface-container-high": "#e7e8e9",
+                    "outline-variant": "#e0bfbd",
+                    "on-tertiary-container": "#003b26"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface flex min-h-screen">
+<!-- SideNavBar (Shared Component) -->
+<aside class="hidden md:flex flex-col h-screen w-64 bg-slate-50 dark:bg-slate-900 py-8 px-4 border-r-0 fixed left-0 top-0 z-50">
+<div class="mb-10 px-2">
+<h1 class="text-[#AE2F34] dark:text-[#FF6B6B] font-['Newsreader'] italic font-bold text-2xl tracking-tight">Editorial Wellness</h1>
+<p class="font-body text-xs text-slate-500 tracking-widest uppercase mt-1">Management Portal</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:text-[#AE2F34] hover:bg-white/50 transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:text-[#AE2F34] hover:bg-white/50 transition-colors" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-sm font-medium">Calendar</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:text-[#AE2F34] hover:bg-white/50 transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-sm font-medium">Team</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:text-[#AE2F34] hover:bg-white/50 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-sm font-medium">Clients</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:text-[#AE2F34] hover:bg-white/50 transition-colors" href="#">
+<span class="material-symbols-outlined">spa</span>
+<span class="text-sm font-medium">Services</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:text-[#AE2F34] hover:bg-white/50 transition-colors" href="#">
+<span class="material-symbols-outlined">assessment</span>
+<span class="text-sm font-medium">Reports</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#AE2F34] dark:text-[#FF6B6B] border-r-2 border-[#AE2F34] font-medium bg-white/50" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="mt-auto px-2">
+<button class="w-full py-3 px-4 bg-primary text-on-primary rounded-xl font-medium text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+                Book Appointment
+            </button>
+</div>
+</aside>
+<main class="flex-1 md:ml-64 flex flex-col min-h-screen">
+<!-- TopNavBar (Shared Component) -->
+<header class="sticky top-0 z-40 glass-nav flex justify-between items-center w-full px-8 py-4 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full text-sm focus:ring-2 focus:ring-primary/20" placeholder="Search marketplace settings..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-slate-600 dark:text-slate-400 hover:opacity-70 transition-opacity relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<div class="flex items-center gap-3">
+<div class="text-right hidden sm:block">
+<p class="text-xs font-bold uppercase tracking-widest text-[#AE2F34]">Editorial Wellness Collective</p>
+<p class="text-[10px] text-slate-500">Public Profile Active</p>
+</div>
+<img alt="Manager Profile" class="w-10 h-10 rounded-full object-cover" data-alt="headshot of a professional female wellness business manager with a warm smile in a brightly lit studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChhHDU0a4a14fGflaS9Il8e3AmCipdrLQ7PXHC6n-1noPX-eZVHUwD14kyDA_l7odWdeQ9cb41egDLTsD5QwOW6do2vPGQXnEyho5aHLMVgpB8W580-skCQvVIfyGj1p-pNCgQluvXvJVOxuHq7UrFnsg_vZRYweqaAg1KIg1rB2Ur2Qh1n9TIj_UAruMOQOco7G1SgITo4J_YAqiUrddpuHFWkjyJoB2_rOCSXYQburmwyIQkxLspuvVEihLA8i5eCYOVhBchCOU"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<div class="p-8 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Form Sections (8 cols) -->
+<div class="lg:col-span-8 space-y-12">
+<section>
+<h2 class="font-headline text-2xl text-on-surface mb-6 italic">Business Profile Details</h2>
+<div class="bg-surface-container-lowest p-8 rounded-2xl space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="label-md block text-xs font-bold uppercase tracking-wider text-slate-500">Business Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-3 text-sm" type="text" value="Editorial Wellness Collective"/>
+</div>
+<div class="space-y-2">
+<label class="label-md block text-xs font-bold uppercase tracking-wider text-slate-500">Marketplace Category</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg p-3 text-sm">
+<option>Holistic Wellness &amp; Spa</option>
+<option>Medical Aesthetics</option>
+<option>Luxury Hair Styling</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="label-md block text-xs font-bold uppercase tracking-wider text-slate-500">Business Bio</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg p-3 text-sm" rows="4">A curated experience focusing on editorial aesthetics and holistic wellness. Our practitioners are industry leaders committed to the art of self-care and sustainable beauty standards.</textarea>
+<p class="text-[10px] text-slate-400 italic">This will appear in the 'About' section of your marketplace listing.</p>
+</div>
+</div>
+</section>
+<section>
+<h2 class="font-headline text-2xl text-on-surface mb-6 italic">Visual Experience</h2>
+<div class="bg-surface-container-lowest p-8 rounded-2xl">
+<label class="label-md block text-xs font-bold uppercase tracking-wider text-slate-500 mb-4">Portfolio Photos</label>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+<div class="aspect-square rounded-xl overflow-hidden relative group">
+<img alt="Studio Interior" class="w-full h-full object-cover" data-alt="luxury spa interior with minimalist furniture, white walls, and soft warm lighting creating a serene atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfaIRrApZJpb7zOfwTLZ_SbXc36-49KmmYAGjYXFsFaDVNkhry_4auXBfssczWwGABL1pAm3J--ewd9_GjCfAxvH5pZhhkhmziuc6nVV9pj9NPcHpTkeYocX43H65ly4qyqpdSYfhooeApPV8dS37grZzOU42axnfb1jVpeU-jgruUgLFlWtfMR46waR1cvJ0rMSHefA-yqq6SXxSYuht0nOaY2YRnOE2lAzqoUtUwBBUtoC0DYJr0PxQEq41IrDUn60SiEimtj44"/>
+<button class="absolute top-2 right-2 p-1 bg-white/80 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm text-error">close</span>
+</button>
+</div>
+<div class="aspect-square rounded-xl border-2 border-dashed border-slate-200 flex flex-col items-center justify-center text-slate-400 hover:border-primary/40 hover:bg-primary/5 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-3xl mb-1">add_photo_alternate</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Upload</span>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="font-headline text-2xl text-on-surface mb-6 italic">Operations &amp; Booking</h2>
+<div class="bg-surface-container-lowest p-8 rounded-2xl space-y-8">
+<div class="space-y-2">
+<label class="label-md block text-xs font-bold uppercase tracking-wider text-slate-500">Studio Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">location_on</span>
+<input class="w-full bg-surface-container-low border-none rounded-lg pl-10 p-3 text-sm" type="text" value="452 Madison Avenue, 14th Floor, New York, NY"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<label class="label-md block text-xs font-bold uppercase tracking-wider text-slate-500">Cancellation Policy</label>
+<span class="material-symbols-outlined text-sm text-slate-400 cursor-help" title="Defined how much notice a client needs to give">info</span>
+</div>
+<select class="w-full bg-surface-container-low border-none rounded-lg p-3 text-sm">
+<option>Strict (48 hours)</option>
+<option>Moderate (24 hours)</option>
+<option>Flexible (4 hours)</option>
+</select>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<label class="label-md block text-xs font-bold uppercase tracking-wider text-slate-500">Deposit Amount</label>
+<span class="material-symbols-outlined text-sm text-slate-400 cursor-help" title="Percentage of service cost paid upfront">payments</span>
+</div>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-slate-400">%</span>
+<input class="w-full bg-surface-container-low border-none rounded-lg pl-8 p-3 text-sm" type="number" value="25"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="flex justify-end gap-4">
+<button class="px-6 py-3 rounded-xl text-slate-600 font-medium hover:bg-slate-100 transition-colors">Discard Changes</button>
+<button class="px-8 py-3 bg-primary text-on-primary rounded-xl font-bold uppercase tracking-widest text-sm shadow-sm hover:opacity-90 transition-all">Publish Profile</button>
+</div>
+</div>
+<!-- Sidebar Widgets (4 cols) -->
+<div class="lg:col-span-4 space-y-8">
+<!-- Preview Card -->
+<div>
+<h3 class="font-headline text-lg italic text-slate-500 mb-4">Consumer Preview</h3>
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm">
+<div class="relative aspect-[4/3]">
+<img alt="Marketplace Preview" class="w-full h-full object-cover" data-alt="lifestyle photography of a high-end beauty salon session with soft focal blur and elegant aesthetics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-0CIjBW1_m6XHOWzaGLKISFoSdVZKZ7rdCbWMTExC6hIuU7GdmqNM30dhv2tl-JRgM_tp7S-gutTTAOeCo0p1cYL10LDfT5TiDQhrHsadho4e08WBPiRMB9ODxfMYj6n91sz72C6bjHXQJk4-AiN584cnKLsc_C8P-IzQndsabLlZSu7-gVUrvAzoM2x6NZsHirl6uYykziI3vzQ05Wkm6zmH0Mz0Q8IukTfCTX5oMZXqoBNUUEeQGjmjaMWagYZzKW9yrk1UgoU"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[10px] font-bold">4.9</span>
+</div>
+</div>
+<div class="p-6 space-y-3">
+<p class="text-[10px] font-bold uppercase tracking-widest text-secondary">New York • Spa</p>
+<h4 class="font-headline text-xl italic">Editorial Wellness Collective</h4>
+<p class="text-xs text-slate-500 line-clamp-2">A curated experience focusing on editorial aesthetics and holistic wellness. Industry leaders in luxury self-care...</p>
+<div class="pt-4 border-t border-slate-50">
+<button class="w-full py-3 bg-primary/10 text-primary rounded-xl font-bold uppercase tracking-widest text-[10px] hover:bg-primary/20 transition-colors">Book Now</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Commission Info Box -->
+<div class="bg-secondary/5 border-l-4 border-secondary p-6 rounded-r-2xl">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary">account_balance_wallet</span>
+<div class="space-y-2">
+<h4 class="text-sm font-bold text-on-secondary-container uppercase tracking-tight">Marketplace Model</h4>
+<p class="text-xs leading-relaxed text-slate-600">
+                                We believe in your success. You only pay a <span class="font-bold text-secondary">20% commission on the very first booking</span> from a new client discovered through our marketplace.
+                            </p>
+<p class="text-xs font-medium text-slate-700 italic">
+                                All subsequent bookings with that client are 0% commission.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Help Widget -->
+<div class="bg-surface-container-low p-6 rounded-2xl space-y-4">
+<h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Need Guidance?</h4>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-slate-600 hover:text-primary cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-base">auto_fix_high</span>
+<span>Photo Best Practices</span>
+</li>
+<li class="flex items-center gap-3 text-sm text-slate-600 hover:text-primary cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-base">verified</span>
+<span>Verification Process</span>
+</li>
+<li class="flex items-center gap-3 text-sm text-slate-600 hover:text-primary cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-base">support_agent</span>
+<span>Contact Concierge</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile Bottom NavBar (Shared Component logic) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 glass-nav h-16 flex justify-around items-center px-4 z-50 border-t-0 shadow-lg">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-[10px] font-medium">Calendar</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#AE2F34]">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</nav>
+</body></html>

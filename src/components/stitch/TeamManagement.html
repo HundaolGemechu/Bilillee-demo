@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#8c1520",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#ffdad8",
+                    "secondary-fixed-dim": "#44dfab",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#ffb3b0",
+                    "on-surface": "#191c1d",
+                    "primary": "#ae2f34",
+                    "surface-bright": "#f8f9fa",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#00b179",
+                    "on-background": "#191c1d",
+                    "on-secondary-fixed": "#002116",
+                    "background": "#f8f9fa",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#006c48",
+                    "primary-fixed-dim": "#ffb3b0",
+                    "surface-tint": "#ae2f34",
+                    "tertiary-fixed": "#72fbbc",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-secondary-container": "#007354",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "on-tertiary-fixed": "#002113",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f3f4f5",
+                    "on-primary-fixed": "#410006",
+                    "on-primary": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "tertiary-fixed-dim": "#52dea2",
+                    "on-primary-container": "#6d0010",
+                    "surface-variant": "#e1e3e4",
+                    "primary-container": "#ff6b6b",
+                    "secondary-container": "#67fcc6",
+                    "outline": "#8c706f",
+                    "inverse-surface": "#2e3132",
+                    "secondary-fixed": "#67fcc6",
+                    "on-secondary-fixed-variant": "#00513a",
+                    "on-tertiary-fixed-variant": "#005236",
+                    "secondary": "#006c4f",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-surface-variant": "#584140",
+                    "surface-dim": "#d9dadb",
+                    "surface-container-high": "#e7e8e9",
+                    "outline-variant": "#e0bfbd",
+                    "on-tertiary-container": "#003b26"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .editorial-text { font-family: 'Newsreader', serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface flex overflow-hidden">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 bg-slate-50 flex flex-col py-8 px-4 flex-shrink-0 z-20">
+<div class="mb-10 px-2">
+<span class="text-[#ae2f34] font-['Newsreader'] italic font-bold text-2xl tracking-tight block">Editorial Wellness</span>
+<span class="text-slate-500 text-xs font-bold uppercase tracking-widest mt-1 block">Management Portal</span>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-4 py-3 text-slate-500 hover:text-[#ae2f34] hover:bg-white/50 transition-colors rounded-xl group" href="#">
+<span class="material-symbols-outlined mr-3">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-500 hover:text-[#ae2f34] hover:bg-white/50 transition-colors rounded-xl group" href="#">
+<span class="material-symbols-outlined mr-3">calendar_today</span>
+<span class="font-medium">Calendar</span>
+</a>
+<a class="flex items-center px-4 py-3 text-[#ae2f34] border-r-2 border-[#ae2f34] font-medium bg-white/50 rounded-l-xl group" href="#">
+<span class="material-symbols-outlined mr-3">group</span>
+<span class="font-medium">Team</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-500 hover:text-[#ae2f34] hover:bg-white/50 transition-colors rounded-xl group" href="#">
+<span class="material-symbols-outlined mr-3">person</span>
+<span class="font-medium">Clients</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-500 hover:text-[#ae2f34] hover:bg-white/50 transition-colors rounded-xl group" href="#">
+<span class="material-symbols-outlined mr-3">spa</span>
+<span class="font-medium">Services</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-500 hover:text-[#ae2f34] hover:bg-white/50 transition-colors rounded-xl group" href="#">
+<span class="material-symbols-outlined mr-3">assessment</span>
+<span class="font-medium">Reports</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-500 hover:text-[#ae2f34] hover:bg-white/50 transition-colors rounded-xl group mt-auto" href="#">
+<span class="material-symbols-outlined mr-3">settings</span>
+<span class="font-medium">Settings</span>
+</a>
+</nav>
+<div class="mt-8 px-2">
+<button class="w-full bg-primary text-on-primary py-3 px-4 rounded-xl font-bold text-sm tracking-wide active:scale-[0.98] transition-transform">
+                Book Appointment
+            </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col h-screen overflow-y-auto bg-surface relative">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-10 glass-panel flex justify-between items-center w-full px-8 py-4 border-b border-slate-100">
+<div class="flex items-center bg-surface-container-low px-4 py-2 rounded-full w-96">
+<span class="material-symbols-outlined text-on-surface-variant mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full" placeholder="Search team members..." type="text"/>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-slate-600 hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="flex items-center space-x-3 pl-6 border-l border-slate-200">
+<div class="text-right">
+<p class="text-xs font-bold uppercase tracking-widest text-primary">Alexandra Vance</p>
+<p class="text-[10px] text-slate-500">Salon Director</p>
+</div>
+<img alt="Manager Profile" class="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm" data-alt="professional portrait of a sophisticated woman with styled hair in a clean salon environment, natural soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD5S5o9lTTXhN2vsE51oNZ7Vu9QbfOjhf8WMS9BHzS0EOAcjo2w89v-j73trKteWhlrjGp6cL-NXamMyBlpoLVu-7yt-5qWvxVRh2590cYB3yekjvtDpVmlMky2Wesbh-xfvF4uQmydhmCHRensRgzg_7l2vG8Gc9GtWF03tDk8imDmuL7D9x_gA6S9t-jPd-Bms7OQjk0VK9E6MyGx9d3F3aqW6fFUFn8yVsGrlkK5CVNYcRijDYwYofl3p6rMWh-yqfhzfADfI8"/>
+</div>
+</div>
+</header>
+<!-- Canvas -->
+<div class="p-10 space-y-12 max-w-7xl mx-auto w-full">
+<!-- Header Section -->
+<div class="flex justify-between items-end">
+<div>
+<h1 class="text-5xl font-light italic mb-2">Team Management</h1>
+<p class="text-on-surface-variant max-w-xl font-body">Curate your collective. Manage roles, visibility, and service assignments for your editorial team members.</p>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-on-primary px-8 py-4 rounded-xl font-bold text-sm tracking-widest uppercase transition-all shadow-lg shadow-primary/20 flex items-center">
+<span class="material-symbols-outlined mr-2">person_add</span>
+                    Invite Team Member
+                </button>
+</div>
+<!-- Bento Layout: Team Table & Stats -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Main Table Section (Col 8) -->
+<div class="col-span-12 lg:col-span-8 space-y-6">
+<div class="bg-surface-container-lowest rounded-3xl p-8 border border-white/50">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl font-medium italic">Active Collective</h2>
+<div class="flex space-x-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold tracking-tighter uppercase">9 Members</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="border-b border-surface-container-low">
+<th class="pb-4 font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold">Member</th>
+<th class="pb-4 font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold">Role</th>
+<th class="pb-4 font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold">Specialties</th>
+<th class="pb-4 font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low/50">
+<!-- Row 1 -->
+<tr class="group hover:bg-surface-container-low/30 transition-colors">
+<td class="py-5">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 rounded-2xl overflow-hidden">
+<img alt="Team Avatar" class="w-full h-full object-cover" data-alt="portrait of a male hair stylist with a creative look and professional attire in a modern studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIKYbcaQnLhhLFNxEeQMoM-HC-NoSsp9NyyE3SgaDxdTEHKkC5mZrAw3YV5tiG_Md9b-sQmiScSlUqVZQ9CGEprp-qcPhdEA6oEPxk-qQQq0HsoHD6BSvsbed6TXaw6D5NGr8dfLVXiMK9K3bOOhsgARTvBsyuzxhrQuYfdfMZhBTtp3Gw9jAjlsGpgInS0DYoMr9g-hv3z_Pyf3mMuyyqJ-6teu1_4LhFxLdkgiYMsqaerYqqJta04F_QbZGGucTiEm3TJKmiKsA"/>
+</div>
+<div>
+<p class="font-bold text-sm">Julian Rossi</p>
+<p class="text-xs text-on-surface-variant">julian@editorial.com</p>
+</div>
+</div>
+</td>
+<td class="py-5">
+<span class="text-xs font-medium px-2.5 py-1 rounded-lg bg-surface-container text-on-surface-variant">Service Provider</span>
+</td>
+<td class="py-5">
+<div class="flex flex-wrap gap-1">
+<span class="text-[10px] uppercase font-bold text-secondary">Precision Cut</span>
+<span class="text-[10px] text-slate-300">•</span>
+<span class="text-[10px] uppercase font-bold text-secondary">Color Theory</span>
+</div>
+</td>
+<td class="py-5 text-right">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="group hover:bg-surface-container-low/30 transition-colors">
+<td class="py-5">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 rounded-2xl overflow-hidden">
+<img alt="Team Avatar" class="w-full h-full object-cover" data-alt="portrait of a confident woman manager in a clean white blazer, smiling warmly in a bright workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6QMDn8gLXUcXWfSPMQHxOU8Sx66n6eF7HB8M_YieN-KrbCGV0CpE8HY90nSb1yMbaMa_7pkhpi5Y0_9zAPtsahZ2UBa_fSjh4BmNwqqoiJ8FPZQ6SOSoOaRwEGPfl3boyTuXB8UHkte_sJMFwLxGZYeuAO430449D0GbnhMMGVr3CBVZAYoAWZymg0KAbj6dTIfMcdO1qNJfMuMu2iTblzovHG-srYblbmYzcsi2E3JEXPtuo9apfm8oYkoe4IPRY2Q8Z9_x6HkA"/>
+</div>
+<div>
+<p class="font-bold text-sm">Elena Rodriguez</p>
+<p class="text-xs text-on-surface-variant">elena@editorial.com</p>
+</div>
+</div>
+</td>
+<td class="py-5">
+<span class="text-xs font-medium px-2.5 py-1 rounded-lg bg-primary-fixed-dim/20 text-primary">Manager</span>
+</td>
+<td class="py-5">
+<div class="flex flex-wrap gap-1">
+<span class="text-[10px] uppercase font-bold text-secondary">Nail Artistry</span>
+<span class="text-[10px] text-slate-300">•</span>
+<span class="text-[10px] uppercase font-bold text-secondary">Wellness Rituals</span>
+</div>
+</td>
+<td class="py-5 text-right">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="group hover:bg-surface-container-low/30 transition-colors">
+<td class="py-5">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 rounded-2xl overflow-hidden">
+<img alt="Team Avatar" class="w-full h-full object-cover" data-alt="headshot of a stylish male beauty professional in a black minimalist outfit, soft professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6igunUHK4s1uDWqtBFo5RFBfEPLszo-2xjbZoFg0d21DTcIMoO5uyHEdgQuprIGNc3yx5Cz1JO9zdB20_iNaxKPLD-0q8erUfmLOSbCejNAhVo0mk8MDy_wpZ5KVxkfC9I7Bza-kGkxNhnhrAS37dvboALz1ctk_Exga91di9NQCL72mO5wJ1BUlv2dXoDGdDtChJ9AtcAZHddV08BdPl7ElRjhQkSWtEpWz3o8PhfHpmU_FG0ekC5uHP1WkaK5KgouzvOQts2tw"/>
+</div>
+<div>
+<p class="font-bold text-sm">Marcus Thorne</p>
+<p class="text-xs text-on-surface-variant">marcus@editorial.com</p>
+</div>
+</div>
+</td>
+<td class="py-5">
+<span class="text-xs font-medium px-2.5 py-1 rounded-lg bg-surface-container text-on-surface-variant">Service Provider</span>
+</td>
+<td class="py-5">
+<div class="flex flex-wrap gap-1">
+<span class="text-[10px] uppercase font-bold text-secondary">Barbering</span>
+<span class="text-[10px] text-slate-300">•</span>
+<span class="text-[10px] uppercase font-bold text-secondary">Skin Therapy</span>
+</div>
+</td>
+<td class="py-5 text-right">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-8 pt-8 border-t border-surface-container-low text-center">
+<button class="text-on-surface-variant hover:text-primary text-xs font-bold uppercase tracking-widest transition-colors">View All Collective Members</button>
+</div>
+</div>
+</div>
+<!-- Role Mapping Section (Col 4) -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<div class="bg-surface-container-low rounded-3xl p-8 relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-xl font-medium italic mb-6">Permissions Overview</h3>
+<div class="space-y-6">
+<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm">
+<div class="flex justify-between items-center mb-3">
+<span class="font-bold text-sm">Owner</span>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">Full system access, financial reporting, team commission management, and store settings.</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm">
+<div class="flex justify-between items-center mb-3">
+<span class="font-bold text-sm">Manager</span>
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">Access to team schedules, client database, and inventory. Cannot see payroll or change store branding.</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm">
+<div class="flex justify-between items-center mb-3">
+<span class="font-bold text-sm">Service Provider</span>
+<span class="material-symbols-outlined text-slate-400 text-sm" style="font-variation-settings: 'FILL' 1;">person_pin_circle</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">Personal calendar access, client booking for assigned services only, and personal performance stats.</p>
+</div>
+</div>
+<button class="w-full mt-8 border border-primary/20 text-primary py-3 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-primary/5 transition-colors">
+                                Edit Permission Roles
+                            </button>
+</div>
+<!-- Decorative background element -->
+<div class="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+<!-- Availability Quick Look -->
+<div class="bg-surface-container-lowest rounded-3xl p-8 border border-white/50">
+<h3 class="text-xl font-medium italic mb-6">Today's Presence</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded-full bg-secondary ring-4 ring-secondary/10 flex items-center justify-center">
+<span class="text-[10px] text-white font-bold">JR</span>
+</div>
+<span class="text-sm font-medium">Julian Rossi</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+</div>
+<div class="flex items-center justify-between opacity-50">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded-full bg-slate-300 flex items-center justify-center">
+<span class="text-[10px] text-white font-bold">ER</span>
+</div>
+<span class="text-sm font-medium">Elena Rodriguez</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tighter text-on-surface-variant">Away</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center">
+<span class="text-[10px] text-white font-bold">MT</span>
+</div>
+<span class="text-sm font-medium">Marcus Thorne</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Promotion / Action Asymmetric Section -->
+<div class="relative bg-inverse-surface rounded-[40px] p-12 overflow-hidden flex items-center">
+<div class="relative z-10 lg:w-2/3">
+<span class="font-label text-xs font-bold text-primary-container tracking-[0.3em] uppercase mb-4 block">Expand the Collective</span>
+<h2 class="text-surface text-4xl mb-6 italic leading-tight">Empower your stylists with <br/> personalized growth tracking.</h2>
+<p class="text-inverse-on-surface/70 mb-8 max-w-md font-body">Enable 'Stylist Portfolios' to allow your team to showcase their best editorial work directly to clients during the booking journey.</p>
+<button class="bg-primary-container text-on-primary-container px-10 py-4 rounded-xl font-bold text-sm tracking-widest uppercase hover:scale-[1.02] transition-transform">
+                        Enable Portfolio Access
+                    </button>
+</div>
+<!-- Asymmetric Image Placement -->
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-[120%] hidden lg:block transform rotate-6 translate-x-12 translate-y-4">
+<img alt="Salon Interior" class="w-full h-full object-cover rounded-[60px] opacity-80" data-alt="interior of a high-end luxury hair salon with minimalist editorial design, muted earth tones, and soft architectural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoqKh2rc2wa9-F6lOFGk9wFuNl2kfl0PkqA0caeRu7JeSK1gYRq_Ih1Ak3OkafI3DoQmb2CcOWceeV1X_yuSvNSCHLQG6LQcgPLPzJvupB1pa8s7tThiCAqUyh-Y1aYsUwdPtrpkN8hX1UTAgvgEUAhkGRB8f8SAv6SYjZmRFAicxhC8FquLXljabV4d7M4fNPSEQ0H5LI4TLQhp4d3GGEwjf9kR1ZLnX1tqtpcFHWG1pGC37GXDlcTeTlLy_LnbFiE5WkUJ20-io"/>
+</div>
+</div>
+</div>
+<!-- Footer Meta -->
+<footer class="p-8 mt-auto flex justify-between items-center text-[10px] text-on-surface-variant font-bold uppercase tracking-[0.2em]">
+<span>Editorial Wellness Collective © 2024</span>
+<div class="flex space-x-8">
+<a class="hover:text-primary transition-colors" href="#">Privacy Protocol</a>
+<a class="hover:text-primary transition-colors" href="#">Operational Support</a>
+</div>
+</footer>
+</main>
+</body></html>

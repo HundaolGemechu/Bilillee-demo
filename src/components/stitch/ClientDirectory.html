@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clients Management - Bilillee</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#2e3132",
+                        "primary-fixed": "#ffdad8",
+                        "on-background": "#191c1d",
+                        "secondary-fixed-dim": "#44dfab",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#8c1520",
+                        "on-surface": "#191c1d",
+                        "secondary": "#006c4f",
+                        "on-primary-container": "#6d0010",
+                        "surface-dim": "#d9dadb",
+                        "surface-bright": "#f8f9fa",
+                        "tertiary-fixed": "#72fbbc",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#edeeef",
+                        "surface-tint": "#ae2f34",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f3f4f5",
+                        "on-primary-fixed": "#410006",
+                        "inverse-on-surface": "#f0f1f2",
+                        "tertiary-container": "#00b179",
+                        "surface-container-high": "#e7e8e9",
+                        "outline-variant": "#e0bfbd",
+                        "on-surface-variant": "#584140",
+                        "secondary-fixed": "#67fcc6",
+                        "tertiary-fixed-dim": "#52dea2",
+                        "on-tertiary-fixed": "#002113",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e1e3e4",
+                        "tertiary": "#006c48",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f8f9fa",
+                        "secondary-container": "#67fcc6",
+                        "primary": "#ae2f34",
+                        "outline": "#8c706f",
+                        "on-secondary-fixed": "#002116",
+                        "primary-fixed-dim": "#ffb3b0",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-secondary-fixed-variant": "#00513a",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface": "#f8f9fa",
+                        "inverse-primary": "#ffb3b0",
+                        "error": "#ba1a1a",
+                        "primary-container": "#ff6b6b",
+                        "on-secondary-container": "#007354",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#003b26"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, .brand-logo { font-family: 'Newsreader', serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="h-screen w-72 fixed left-0 top-0 bg-white border-r border-slate-100 flex flex-col h-full py-6 px-4 z-50">
+<div class="mb-10 px-4">
+<h1 class="font-serif italic text-xl text-[#ae2f34]">Bilillee</h1>
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mt-1">Management Portal</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 transition-all rounded-xl group" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-xs font-bold uppercase tracking-wider">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 transition-all rounded-xl group" href="#">
+<span class="material-symbols-outlined">content_cut</span>
+<span class="text-xs font-bold uppercase tracking-wider">Providers</span>
+</a>
+<!-- Active State: Clients is a sub-destination of the core workflow -->
+<a class="flex items-center gap-3 px-4 py-3 bg-[#67fcc6]/10 text-[#006c4f] border-l-4 border-[#006c4f] rounded-r-xl group" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-xs font-bold uppercase tracking-wider">Clients</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 transition-all rounded-xl group" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-xs font-bold uppercase tracking-wider">Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 transition-all rounded-xl group" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-xs font-bold uppercase tracking-wider">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 transition-all rounded-xl group" href="#">
+<span class="material-symbols-outlined">spa</span>
+<span class="text-xs font-bold uppercase tracking-wider">Wellness Hub</span>
+</a>
+</nav>
+<div class="mt-auto space-y-1">
+<button class="w-full mb-6 bg-primary text-on-primary py-3 px-4 rounded-xl text-sm font-medium hover:opacity-90 transition-opacity">
+                Invite Provider
+            </button>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 transition-all rounded-xl" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="text-xs font-bold uppercase tracking-wider">Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 transition-all rounded-xl" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-xs font-bold uppercase tracking-wider">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-72 min-h-screen">
+<!-- Top App Bar -->
+<header class="flex justify-between items-center px-12 h-24 w-full sticky top-0 z-40 bg-surface/80 backdrop-blur-md">
+<div>
+<h2 class="text-3xl font-headline italic text-on-surface">Client Directory</h2>
+<p class="text-on-surface-variant text-sm font-body">Curating your customer relationships with elegance.</p>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant opacity-60">notifications</span>
+<div class="w-2 h-2 bg-primary rounded-full absolute top-2 right-2 border-2 border-surface"></div>
+</div>
+<div class="flex items-center gap-3">
+<img alt="Administrator Profile" class="w-10 h-10 rounded-full object-cover" data-alt="Professional studio portrait of an administrator in a modern office, soft natural lighting, high-end editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnZZgzQq_Otuyr4LnfoiuE7gyOF4Ub674tukuRFmwz-dkY3C0_i1507zW9Wg7opKd0RZn4IeuMqvaBJPsKWY0sjVED-794DmPgRvlV67NpT2uPkxChgPueetJUZUPabaAfdaCLTggHnYefpCk_GoDEHuRkPCCf4lsUp-ly2nwqaBO7Lc9qdALkEu0Z4DK1_33-hiXpvZtUSBgYM-ANEA3OXS7FHLMXSTh0Voz8_NnpH48_ItBQFbFaMmXXKLI28xKmkRZAotNfcGo"/>
+<div class="text-right">
+<p class="text-xs font-bold text-on-surface leading-none uppercase tracking-tighter">Admin Portal</p>
+<p class="text-[10px] text-on-surface-variant">Administrator</p>
+</div>
+</div>
+</div>
+</header>
+<section class="px-12 pb-12">
+<!-- Search & Actions Container -->
+<div class="bg-surface-container-low rounded-3xl p-8 mb-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex-1 max-w-xl relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-12 pr-6 py-4 bg-surface-container-lowest border-none rounded-2xl shadow-sm focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-on-surface-variant/40 transition-all" placeholder="Search by name, email, or contact..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-6 py-4 bg-surface-container-lowest text-on-surface font-label text-[10px] tracking-widest uppercase rounded-2xl border border-outline-variant/10 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+                        Filter
+                    </button>
+<button class="flex items-center gap-2 px-8 py-4 bg-primary text-on-primary font-label text-[10px] tracking-widest uppercase rounded-2xl shadow-lg shadow-primary/10 hover:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-sm">person_add</span>
+                        New Client
+                    </button>
+</div>
+</div>
+<!-- Client Grid/Table Section -->
+<div class="bg-surface-container-lowest rounded-[32px] overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50">
+<th class="px-8 py-6 font-label text-[10px] tracking-widest text-on-surface-variant uppercase">Client Profile</th>
+<th class="px-8 py-6 font-label text-[10px] tracking-widest text-on-surface-variant uppercase">Contact Info</th>
+<th class="px-8 py-6 font-label text-[10px] tracking-widest text-on-surface-variant uppercase text-center">Last Visit</th>
+<th class="px-8 py-6 font-label text-[10px] tracking-widest text-on-surface-variant uppercase text-right">Total Spend</th>
+<th class="px-8 py-6"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<!-- Client Row 1 -->
+<tr class="group hover:bg-surface-container-low/30 transition-colors">
+<td class="px-8 py-8">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl overflow-hidden bg-surface-container">
+<img alt="Client Image" class="w-full h-full object-cover" data-alt="Close up portrait of an elegant woman with minimalist jewelry, clean lighting, soft background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAudYUO_YNu_LIauIbESs58S0B4cBX4WpddaxG2Mk5tC0ty6cfm2MVnu43QT-ArZa8ijRox0cm6O6vlnRo4tmtsG7fhEwVba_UYFn1X3jLBpfUaiXznCxWBMX8N94EbdHaQah2UTCq5fIxIOOLZcbU3A6dP8qx8GttOv5n7uWYn2drLuxskTMk62wUVNRNoyDKedWxjR3tvgAX6upOvA6cdKo1KZZ0ZjedRmGQu0RMQH_L6xOfUM7XceT2S9E9yqBfaqYQVCJtXdoQ"/>
+</div>
+<div>
+<h4 class="text-lg font-headline font-medium text-on-surface">Elena Rodriguez</h4>
+<p class="text-xs text-on-surface-variant/70 font-body">Member since May 2023</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-8">
+<div class="flex flex-col gap-1">
+<span class="text-sm font-body text-on-surface">elena.rod@example.com</span>
+<span class="text-xs text-on-surface-variant/60">+1 (555) 012-3456</span>
+</div>
+</td>
+<td class="px-8 py-8 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/20 text-on-secondary-container rounded-full text-[10px] font-bold uppercase tracking-tight">
+<div class="w-1.5 h-1.5 bg-secondary rounded-full"></div>
+                                    2 Days Ago
+                                </div>
+</td>
+<td class="px-8 py-8 text-right">
+<span class="text-lg font-headline italic text-on-surface font-medium">$1,240.50</span>
+</td>
+<td class="px-8 py-8 text-right">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Client Row 2 -->
+<tr class="group hover:bg-surface-container-low/30 transition-colors">
+<td class="px-8 py-8">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl overflow-hidden bg-surface-container">
+<img alt="Client Image" class="w-full h-full object-cover" data-alt="Portrait of a professional man in a modern setting, soft afternoon light, high-end photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH3bFauQZHjM3k_InVmciz3-pL5pproZo7qus7lae6oBiBAMac7qOHyPazV49SKrjpTfmnCR4yN-bi-Kbf8PB7GUm8fahcolEoRE_pd6UpfMdlINgtr8-cqB5R5vETVxaNRuKNKy0JHlGx6TG31zQA4jgNqlmdX6QsjKLibyHFn6mwEViT_XNEtoz1qzlXS1GKhuSgPS_z77RNiCTDgnBohjrhYGOQN6XHRxoQgCUclAMNOFl7uf8dlaBHhzhkqkFVIaPCjgurM9I"/>
+</div>
+<div>
+<h4 class="text-lg font-headline font-medium text-on-surface">Julian Thorne</h4>
+<p class="text-xs text-on-surface-variant/70 font-body">Member since Jan 2024</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-8">
+<div class="flex flex-col gap-1">
+<span class="text-sm font-body text-on-surface">j.thorne@business.com</span>
+<span class="text-xs text-on-surface-variant/60">+1 (555) 987-6543</span>
+</div>
+</td>
+<td class="px-8 py-8 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container text-on-surface-variant rounded-full text-[10px] font-bold uppercase tracking-tight">
+                                    15 Days Ago
+                                </div>
+</td>
+<td class="px-8 py-8 text-right">
+<span class="text-lg font-headline italic text-on-surface font-medium">$450.00</span>
+</td>
+<td class="px-8 py-8 text-right">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Client Row 3 -->
+<tr class="group hover:bg-surface-container-low/30 transition-colors">
+<td class="px-8 py-8">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl overflow-hidden bg-surface-container">
+<img alt="Client Image" class="w-full h-full object-cover" data-alt="Close up of a young woman with a natural look, editorial lighting, neutral studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTITM9uEpIhvoMyc6crtVgV318z-KwtUmPoBWeey8YkMAXpPJqM3NUFkoLh2RwXcu4O2VBZUyNVG2-mYZx9NPkwlWE7JI7vJNwsBnBCQYpWpVWyWY2zDoPHLh2KbQg0GwPXG_OcfeiBMyncVEJapcXf9dT7Z4V-xanAfpLvZnvj7KwxQqGlRAVRUVo4SCT4yY3G7krV1t5ANqyNmNyZ_3os_24GZVLNbGJZ7--rvRQ1av-xctOrV1ccpccuWzmtLBVMOOfzhCSg7o"/>
+</div>
+<div>
+<h4 class="text-lg font-headline font-medium text-on-surface">Sophia Chen</h4>
+<p class="text-xs text-on-surface-variant/70 font-body">Member since Nov 2023</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-8">
+<div class="flex flex-col gap-1">
+<span class="text-sm font-body text-on-surface">sophia.wellness@mail.com</span>
+<span class="text-xs text-on-surface-variant/60">+1 (555) 443-2211</span>
+</div>
+</td>
+<td class="px-8 py-8 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/20 text-on-secondary-container rounded-full text-[10px] font-bold uppercase tracking-tight">
+<div class="w-1.5 h-1.5 bg-secondary rounded-full"></div>
+                                    Today
+                                </div>
+</td>
+<td class="px-8 py-8 text-right">
+<span class="text-lg font-headline italic text-on-surface font-medium">$2,100.25</span>
+</td>
+<td class="px-8 py-8 text-right">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Client Row 4 -->
+<tr class="group hover:bg-surface-container-low/30 transition-colors">
+<td class="px-8 py-8">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl overflow-hidden bg-surface-container">
+<img alt="Client Image" class="w-full h-full object-cover" data-alt="Artistic portrait of a mature man with character, warm studio lighting, textured background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjrFR6d8V0WcWqjfAi5PzP4LsSd9K4S9KIB1E-Y3c3JANf7VX3xATZK4ECFMZy0mL-1vNtwkg2kjgWS8rWEEwxrC8hWlpUTvuL_7a1p8A2dOQDadbVPG8D201eELL1Huh4CRvtE5lZV35q30iY6LxXDkHGL46tgic4snvj3QgHCa9pqF8Qp0oWVUjb1DSL4sf4FOy6Cp7e7PsedsuDM_RababE4S51HbN-b7R8fPdbIkm-KVpTvEE08kFIsTUxhjhmDg_390V6sCE"/>
+</div>
+<div>
+<h4 class="text-lg font-headline font-medium text-on-surface">Marcus Sterling</h4>
+<p class="text-xs text-on-surface-variant/70 font-body">Member since Aug 2022</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-8">
+<div class="flex flex-col gap-1">
+<span class="text-sm font-body text-on-surface">m.sterling@global.net</span>
+<span class="text-xs text-on-surface-variant/60">+1 (555) 777-8899</span>
+</div>
+</td>
+<td class="px-8 py-8 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container text-on-surface-variant rounded-full text-[10px] font-bold uppercase tracking-tight">
+                                    1 Month Ago
+                                </div>
+</td>
+<td class="px-8 py-8 text-right">
+<span class="text-lg font-headline italic text-on-surface font-medium">$8,430.00</span>
+</td>
+<td class="px-8 py-8 text-right">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Pagination/Footer -->
+<div class="px-8 py-6 border-t border-surface-container-low flex items-center justify-between">
+<p class="text-[10px] font-label tracking-widest text-on-surface-variant uppercase">Showing 4 of 284 Clients</p>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-xl border border-outline-variant/20 text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl bg-primary text-on-primary font-bold text-xs">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl border border-outline-variant/20 text-on-surface-variant hover:bg-surface-container transition-colors text-xs font-bold">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl border border-outline-variant/20 text-on-surface-variant hover:bg-surface-container transition-colors text-xs font-bold">3</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl border border-outline-variant/20 text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Asymmetric Editorial Section: Insights -->
+<div class="mt-12 grid grid-cols-12 gap-8">
+<div class="col-span-12 lg:col-span-4 bg-[#006c4f] text-white p-10 rounded-[32px] flex flex-col justify-between min-h-[300px] relative overflow-hidden group">
+<div class="relative z-10">
+<h3 class="text-3xl font-headline italic mb-4">Client Retention</h3>
+<p class="text-sm opacity-80 font-body leading-relaxed max-w-[200px]">Your top 10% of clients account for 65% of your quarterly revenue.</p>
+</div>
+<div class="relative z-10 mt-6">
+<span class="text-5xl font-headline italic">+12%</span>
+<p class="text-[10px] font-label uppercase tracking-widest mt-2 opacity-60">Since last month</p>
+</div>
+<div class="absolute -right-8 -bottom-8 opacity-10 group-hover:scale-110 transition-transform duration-700">
+<span class="material-symbols-outlined !text-[200px]" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-8 bg-surface-container-low rounded-[32px] p-10 flex flex-col md:flex-row gap-10 overflow-hidden">
+<div class="flex-1">
+<span class="font-label text-[10px] tracking-widest text-primary uppercase block mb-4">Curated Insight</span>
+<h3 class="text-3xl font-headline italic text-on-surface mb-6 leading-tight">Identify your most loyal visitors with automated tiering.</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-8">
+                            Bilillee helps you separate the occasional visitor from your wellness advocates. Use our spending analysis to offer exclusive loyalty rewards to your top-tier clients.
+                        </p>
+<button class="flex items-center gap-3 text-on-surface font-label text-[10px] tracking-widest uppercase group">
+                            Configure Loyalty Program
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="w-full md:w-64 h-64 rounded-2xl overflow-hidden shadow-2xl relative translate-y-4 md:translate-y-8 md:translate-x-4 rotate-2">
+<img alt="Interior Context" class="w-full h-full object-cover" data-alt="Modern spa interior with minimalist furniture and a warm, inviting atmosphere, high-end design, shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjHOQr2VRUd5BodvHbqvao_Xfyo8TjJIBjUdA5RZdu36nUR9rZCaLBZi_DXmKgYlMYe2gmqlwoJPryVQF6zRsRsqaYwMDplrDwyjWGdjfUItMbeF4gdtxptZXn3ypvOYdYSq7Ady4otI7tCsnWOdBzMLZsnB3843DY_CiEmtKTjxgnHE6b3bcIfb1Q50IFz5X8ooXXplGrAYdP23V6UuhjYJAweIBayjqjQANTS2fmXmIYCN7opCJnxV4Ro2mGEbfWSLvmK-b8P3c"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body></html>

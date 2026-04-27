@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#2e3132",
+                        "primary-fixed": "#ffdad8",
+                        "on-background": "#191c1d",
+                        "secondary-fixed-dim": "#44dfab",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#8c1520",
+                        "on-surface": "#191c1d",
+                        "secondary": "#006c4f",
+                        "on-primary-container": "#6d0010",
+                        "surface-dim": "#d9dadb",
+                        "surface-bright": "#f8f9fa",
+                        "tertiary-fixed": "#72fbbc",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#edeeef",
+                        "surface-tint": "#ae2f34",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f3f4f5",
+                        "on-primary-fixed": "#410006",
+                        "inverse-on-surface": "#f0f1f2",
+                        "tertiary-container": "#00b179",
+                        "surface-container-high": "#e7e8e9",
+                        "outline-variant": "#e0bfbd",
+                        "on-surface-variant": "#584140",
+                        "secondary-fixed": "#67fcc6",
+                        "tertiary-fixed-dim": "#52dea2",
+                        "on-tertiary-fixed": "#002113",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e1e3e4",
+                        "tertiary": "#006c48",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f8f9fa",
+                        "secondary-container": "#67fcc6",
+                        "primary": "#ae2f34",
+                        "outline": "#8c706f",
+                        "on-secondary-fixed": "#002116",
+                        "primary-fixed-dim": "#ffb3b0",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-secondary-fixed-variant": "#00513a",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface": "#f8f9fa",
+                        "inverse-primary": "#ffb3b0",
+                        "error": "#ba1a1a",
+                        "primary-container": "#ff6b6b",
+                        "on-secondary-container": "#007354",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#003b26"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Newsreader', serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar Integration -->
+<aside class="h-screen w-72 fixed left-0 top-0 bg-white border-r border-slate-100 flex flex-col py-6 px-4 z-50">
+<div class="flex flex-col mb-8 px-4">
+<span class="font-serif italic text-xl text-primary">Bilillee</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant opacity-60">Management Portal</span>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">dashboard</span>
+<span class="text-xs font-bold uppercase tracking-wider">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-[#67FCC6]/10 text-secondary border-l-4 border-secondary transition-all rounded-r-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="text-xs font-bold uppercase tracking-wider">Inventory</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">content_cut</span>
+<span class="text-xs font-bold uppercase tracking-wider">Providers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">calendar_month</span>
+<span class="text-xs font-bold uppercase tracking-wider">Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">monitoring</span>
+<span class="text-xs font-bold uppercase tracking-wider">Analytics</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-slate-100 space-y-1">
+<button class="w-full mb-4 py-3 px-4 bg-secondary text-on-secondary rounded-xl text-xs font-bold uppercase tracking-widest hover:opacity-90 transition-opacity">
+                Invite Provider
+            </button>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:bg-slate-50 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined text-xl">help</span>
+<span class="text-xs font-bold uppercase">Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:bg-slate-50 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined text-xl">logout</span>
+<span class="text-xs font-bold uppercase">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="ml-72 min-h-screen bg-surface-container-low">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-12 h-20 w-full sticky top-0 z-40 bg-white/80 backdrop-blur-md">
+<div class="flex items-center gap-8">
+<h1 class="text-2xl font-serif italic text-primary">Inventory Management</h1>
+<div class="flex gap-6 text-sm font-medium">
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">All Products</a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#">Suppliers</a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#">Purchase Orders</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-high border-none rounded-full text-sm focus:ring-2 focus:ring-primary w-64 transition-all" placeholder="Search inventory..." type="text"/>
+</div>
+<button class="p-2 text-slate-600 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional headshot of a female administrator with a friendly expression in a brightly lit studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJTDjKcaKOSny_P5yb9f6nvdz1pD8jpzS16fJZZX9f7GuodXrtLKjnvwmjToSg39zb8h_UIVn8n8ds9_nZ3Jpz6dhsLUuvZLEziXZ6S52Zc5j0iOprhcTfIgl82U9cpxtbffzG1YxKQbvRs9kfAGLbjuTWMLPNWLPpvdLyso9CdlPanj0FJhfblHNMJBEuDWZCpGBxWKfFWoWH9xcXbuFxuiPia9E1eIpenPZq_b1aNsHcsL0ZQPzAYy2UtJc9U7Zmp1QvoxqGOWU"/>
+</div>
+</div>
+</header>
+<section class="p-12">
+<!-- Header & Action Row -->
+<div class="flex justify-between items-end mb-10">
+<div>
+<p class="text-xs font-bold uppercase tracking-[0.2em] text-secondary mb-2">Starter+ Tier Exclusive</p>
+<h2 class="text-4xl font-serif italic text-on-surface">Digital Stock Curator</h2>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-3 bg-surface-container-lowest text-on-surface rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-slate-50 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">download</span> Export CSV
+                    </button>
+<button class="px-6 py-3 bg-primary text-on-primary rounded-xl text-xs font-bold uppercase tracking-widest hover:opacity-90 transition-opacity flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">add</span> New Product
+                    </button>
+</div>
+</div>
+<!-- Dashboard Highlights (Asymmetric Bento) -->
+<div class="grid grid-cols-12 gap-6 mb-12">
+<!-- Critical Low Stock Alert Card -->
+<div class="col-span-12 md:col-span-7 bg-primary-container p-8 rounded-[2rem] flex flex-col justify-between relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-2 text-on-primary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">error</span>
+<span class="text-xs font-bold uppercase tracking-widest">Low Stock Alert</span>
+</div>
+<h3 class="text-4xl font-serif italic text-on-primary-container leading-tight max-w-sm">4 essential products are below reorder points.</h3>
+</div>
+<div class="flex items-center gap-4 mt-8 relative z-10">
+<button class="px-8 py-4 bg-on-primary-container text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-black transition-colors">
+                            Restock Now
+                        </button>
+<a class="text-on-primary-container text-xs font-bold uppercase tracking-widest border-b border-on-primary-container" href="#">View Details</a>
+</div>
+<!-- Aesthetic Detail -->
+<div class="absolute -right-12 -bottom-12 w-64 h-64 bg-primary opacity-20 rounded-full blur-3xl"></div>
+</div>
+<!-- Quick Stats -->
+<div class="col-span-12 md:col-span-5 grid grid-rows-2 gap-6">
+<div class="bg-white p-8 rounded-[2rem] flex flex-col justify-center">
+<span class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Total Inventory Value</span>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-serif italic text-on-surface">$24,850</span>
+<span class="text-secondary text-xs font-bold flex items-center">
+<span class="material-symbols-outlined text-sm">trending_up</span> 12%
+                            </span>
+</div>
+</div>
+<div class="bg-secondary-container p-8 rounded-[2rem] flex flex-col justify-center">
+<span class="text-xs font-bold uppercase tracking-widest text-on-secondary-container mb-2">Active Purchase Orders</span>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-serif italic text-on-secondary-container">12</span>
+<span class="text-on-secondary-container opacity-60 text-xs font-medium">Processing</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product List Table Layout -->
+<div class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm">
+<div class="p-8 border-b border-slate-50 flex justify-between items-center">
+<h4 class="text-xl font-serif italic">Product Catalog</h4>
+<div class="flex gap-2">
+<button class="p-2 bg-surface-container-low rounded-lg text-slate-600">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+<th class="px-8 py-6">Product &amp; Category</th>
+<th class="px-8 py-6">Stock Level</th>
+<th class="px-8 py-6">Reorder Point</th>
+<th class="px-8 py-6 text-right">Unit Price</th>
+<th class="px-8 py-6 text-center">Status</th>
+<th class="px-8 py-6"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-50">
+<!-- Product Row 1: Low Stock -->
+<tr class="group hover:bg-slate-50 transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-slate-100 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="high-end skincare product in a minimalist glass bottle with golden accents against a clean white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtRKtYoIAk6_Fy3XIYAAnF-Ro8CSW3pZASa7JcsgkGBmdB2v4WYO5Ps6pjO4X8HjhLy5lxYhahq-zV4Pj9VIyXMWR8ua4A9ee7NY6jO-MaOzvVxPouIIsdW_Fa9JayNaQyRLIGVnOweR_eNf1bppVk5BsNewF8W20QN9pr1cSGS52dRk2PuRiWQhu_YmmCV66M9vFl20uw2iLF1lyDWKpl-P10zxd3BEMd89OhPgDBvAUek5pmiKJqnQYlx1hXffB9FmlsyGRjTDE"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Radiance Face Serum</p>
+<p class="text-xs text-slate-400">Wellness &amp; Skincare</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<div class="flex flex-col gap-1">
+<span class="text-sm font-bold text-primary">12 units</span>
+<div class="w-24 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="w-[12%] h-full bg-primary rounded-full"></div>
+</div>
+</div>
+</td>
+<td class="px-8 py-6 text-sm font-medium text-slate-600">25 units</td>
+<td class="px-8 py-6 text-right font-serif italic text-lg">$85.00</td>
+<td class="px-8 py-6">
+<div class="flex justify-center">
+<span class="px-3 py-1 bg-error-container text-on-error-container text-[10px] font-bold uppercase tracking-widest rounded-full">Critical Low</span>
+</div>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Product Row 2: Healthy Stock -->
+<tr class="group hover:bg-slate-50 transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-slate-100 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="professional grade yoga mat rolled up with a textured surface in deep emerald green color" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7BBxyFIDffDEGLrit7tkH-AJSNkCCgaMy6wC9DrUg08XP9nDqUpKUP8v7L5aQwuVaJUujflvM3bo4R57u-jkagaQS7A6aLHdMJRtZVq9lEIZrV12P4yzjIF4zycOElkc7peT7fJ-pfbsNc_vZNqglT-KoejyVcFa-OrfJZYy2-0rEG95gpBgyPPclyPXbfi_g2A1UjBHQAFK7Iu21Ws5nn1GuIs7W66GrahIK4ZmaTZp2rzHOskw65F12LfOIgfXppBx9qqzcOjo"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Pro-Grip Yoga Mat</p>
+<p class="text-xs text-slate-400">Fitness Equipment</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<div class="flex flex-col gap-1">
+<span class="text-sm font-bold text-on-surface">148 units</span>
+<div class="w-24 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="w-[75%] h-full bg-secondary rounded-full"></div>
+</div>
+</div>
+</td>
+<td class="px-8 py-6 text-sm font-medium text-slate-600">40 units</td>
+<td class="px-8 py-6 text-right font-serif italic text-lg">$120.00</td>
+<td class="px-8 py-6">
+<div class="flex justify-center">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-widest rounded-full">In Stock</span>
+</div>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Product Row 3: Warning Stock -->
+<tr class="group hover:bg-slate-50 transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-slate-100 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="luxury candle with a minimalist ceramic container and a wooden wick on a marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHANNvgJjEXkUAakjTDqpPSl62Q4rxP5xg8P838ToRekKHMf2DOW_ob4AIQdyTHEl05FNqBFe_GjWz5vztp8WTHcZoL_fn7Zblj6bwP02zMB1CraorS1KzFLaCa-otubsK1_K0xl6F4pmhS0_CwV9JhCyX8_z6SsDksZQJRfOpUC9UVZS9QKCa0le-rGY7-pR0Y2trHXNh7E2ag-wJLTsYyK_Jdnkp6x84Xl9J5cdez_eFdRGtyJ-ViajPZOs1JB00Q4yzAvIJXYc"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Santal Aromatherapy Candle</p>
+<p class="text-xs text-slate-400">Home Wellness</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<div class="flex flex-col gap-1">
+<span class="text-sm font-bold text-on-surface">32 units</span>
+<div class="w-24 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="w-[45%] h-full bg-primary-container rounded-full"></div>
+</div>
+</div>
+</td>
+<td class="px-8 py-6 text-sm font-medium text-slate-600">30 units</td>
+<td class="px-8 py-6 text-right font-serif italic text-lg">$42.00</td>
+<td class="px-8 py-6">
+<div class="flex justify-center">
+<span class="px-3 py-1 bg-primary-container text-on-primary-container text-[10px] font-bold uppercase tracking-widest rounded-full">Reorder Soon</span>
+</div>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-8 bg-slate-50 flex justify-between items-center text-xs font-bold uppercase tracking-widest text-slate-400">
+<span>Showing 3 of 128 products</span>
+<div class="flex gap-4">
+<button class="flex items-center gap-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">chevron_left</span> Previous</button>
+<button class="flex items-center gap-1 hover:text-primary transition-colors">Next <span class="material-symbols-outlined text-sm">chevron_right</span></button>
+</div>
+</div>
+</div>
+</section>
+<!-- Floating Contextual FAB -->
+<button class="fixed bottom-12 right-12 w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl shadow-primary/20 flex items-center justify-center group hover:scale-110 transition-transform z-50">
+<span class="material-symbols-outlined text-3xl group-hover:rotate-90 transition-transform">add</span>
+</button>
+</main>
+</body></html>

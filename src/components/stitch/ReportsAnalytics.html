@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bilillee | Reports &amp; Analytics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-surface": "#2e3132",
+                        "primary-fixed": "#ffdad8",
+                        "on-background": "#191c1d",
+                        "secondary-fixed-dim": "#44dfab",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#8c1520",
+                        "on-surface": "#191c1d",
+                        "secondary": "#006c4f",
+                        "on-primary-container": "#6d0010",
+                        "surface-dim": "#d9dadb",
+                        "surface-bright": "#f8f9fa",
+                        "tertiary-fixed": "#72fbbc",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#edeeef",
+                        "surface-tint": "#ae2f34",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f3f4f5",
+                        "on-primary-fixed": "#410006",
+                        "inverse-on-surface": "#f0f1f2",
+                        "tertiary-container": "#00b179",
+                        "surface-container-high": "#e7e8e9",
+                        "outline-variant": "#e0bfbd",
+                        "on-surface-variant": "#584140",
+                        "secondary-fixed": "#67fcc6",
+                        "tertiary-fixed-dim": "#52dea2",
+                        "on-tertiary-fixed": "#002113",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e1e3e4",
+                        "tertiary": "#006c48",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f8f9fa",
+                        "secondary-container": "#67fcc6",
+                        "primary": "#ae2f34",
+                        "outline": "#8c706f",
+                        "on-secondary-fixed": "#002116",
+                        "primary-fixed-dim": "#ffb3b0",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-secondary-fixed-variant": "#00513a",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface": "#f8f9fa",
+                        "inverse-primary": "#ffb3b0",
+                        "error": "#ba1a1a",
+                        "primary-container": "#ff6b6b",
+                        "on-secondary-container": "#007354",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#003b26"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .asymmetric-gradient {
+            background: linear-gradient(135deg, #ae2f34 0%, #ff6b6b 100%);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e7e8e9;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- SideNavBar (Authority: JSON) -->
+<aside class="h-screen w-72 fixed left-0 top-0 flex flex-col h-full py-6 px-4 bg-white border-r border-slate-100 shadow-xl shadow-slate-200/50 z-50">
+<div class="mb-10 px-4">
+<h1 class="font-serif italic text-xl text-[#ae2f34]">Bilillee</h1>
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mt-1">Management Portal</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" data-icon="dashboard">dashboard</span>
+<span class="text-xs font-bold uppercase tracking-wider">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" data-icon="content_cut">content_cut</span>
+<span class="text-xs font-bold uppercase tracking-wider">Providers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" data-icon="calendar_month">calendar_month</span>
+<span class="text-xs font-bold uppercase tracking-wider">Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-[#67fcc6]/10 text-[#006c4f] border-l-4 border-[#006c4f] translate-x-1 duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span class="text-xs font-bold uppercase tracking-wider">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" data-icon="spa">spa</span>
+<span class="text-xs font-bold uppercase tracking-wider">Wellness Hub</span>
+</a>
+</nav>
+<div class="mt-auto px-4 space-y-4">
+<button class="w-full py-3 asymmetric-gradient text-white rounded-md text-sm font-medium shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity">
+                Invite Provider
+            </button>
+<div class="pt-6 space-y-2">
+<a class="flex items-center gap-3 text-slate-500 hover:text-primary transition-colors py-2" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="help">help</span>
+<span class="text-xs font-bold uppercase">Support</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 hover:text-primary transition-colors py-2" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="logout">logout</span>
+<span class="text-xs font-bold uppercase">Logout</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-72 min-h-screen">
+<!-- TopAppBar (Authority: JSON) -->
+<header class="flex justify-between items-center px-8 w-full sticky top-0 z-40 bg-[#F8F9FA] h-16">
+<div class="flex items-center gap-8">
+<h2 class="text-2xl font-serif italic text-[#ae2f34]">Reports &amp; Analytics</h2>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-sm font-bold border-b-2 border-[#ae2f34] text-[#ae2f34] pb-1" href="#">Performance</a>
+<a class="text-sm text-slate-600 hover:text-[#ae2f34] transition-colors pb-1" href="#">Marketing</a>
+<a class="text-sm text-slate-600 hover:text-[#ae2f34] transition-colors pb-1" href="#">Inventory</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-600 hover:text-[#ae2f34] transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-600 hover:text-[#ae2f34] transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img alt="Administrator Profile" class="w-full h-full object-cover" data-alt="professional portrait of a sophisticated male administrator in a modern office setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa7NnmNjFrteqettNs-NPYCQyAI5C_4cA-msTQzLEBrSy4n78cwk7CIe0JAn4J1TcSTRhJ120ldRqIBKqYW-8K_PoxuFnl1a-q6MrpYbm2C0M8incrlmmbnBYKKbT5fMDkuTGBNbzKaXtyWFRAYnH3LN80q-vZ-A4qnnAB5ZTi3KMJPpf62UPC9ot-O3pGW_oSO0Z3U1fPY_xfmLYfcISyI1h9cR2pDs0Gaz37rhPKS1iczbxo9b2IuI94wjnlXmqyfO2hCOh67xU"/>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<section class="p-10 space-y-10">
+<!-- Hero Stats: Asymmetric Editorial Layout -->
+<div class="grid grid-cols-12 gap-8 items-end">
+<div class="col-span-12 md:col-span-5">
+<p class="font-headline italic text-primary text-lg mb-2">Quarterly Review</p>
+<h3 class="font-headline text-5xl leading-tight text-on-surface mb-6">Elevating the standard of <span class="text-primary italic">wellness commerce.</span></h3>
+<p class="text-on-surface-variant max-w-sm mb-8 leading-relaxed">Your business has seen a 24% increase in high-tier memberships since the last curatorial update.</p>
+<div class="flex gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex-1">
+<span class="text-[10px] font-bold uppercase text-slate-400 tracking-tighter block mb-2">Gross Revenue</span>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-medium">$84.2k</span>
+<span class="text-secondary text-xs font-bold">+12%</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex-1">
+<span class="text-[10px] font-bold uppercase text-slate-400 tracking-tighter block mb-2">Conversion</span>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-medium">32.8%</span>
+<span class="text-primary text-xs font-bold">+4%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-7 bg-surface-container-low p-8 rounded-2xl relative overflow-hidden h-[400px]">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-12">
+<div>
+<h4 class="font-headline text-2xl">Revenue Trends</h4>
+<p class="text-xs text-on-surface-variant">Monthly growth across all service tiers</p>
+</div>
+<div class="flex gap-2">
+<button class="px-3 py-1 bg-surface-container-lowest text-[10px] font-bold rounded-full uppercase">Monthly</button>
+<button class="px-3 py-1 text-[10px] font-bold rounded-full uppercase text-on-surface-variant">Yearly</button>
+</div>
+</div>
+<!-- Visual Data Representation (Abstracted Chart) -->
+<div class="flex items-end justify-between h-48 gap-4 px-4">
+<div class="w-full bg-primary/10 rounded-t-lg relative group transition-all hover:bg-primary/20" style="height: 40%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-inverse-surface text-white text-[10px] px-2 py-1 rounded transition-opacity">$12k</div>
+</div>
+<div class="w-full bg-primary/10 rounded-t-lg relative group transition-all hover:bg-primary/20" style="height: 65%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-inverse-surface text-white text-[10px] px-2 py-1 rounded transition-opacity">$24k</div>
+</div>
+<div class="w-full bg-primary/10 rounded-t-lg relative group transition-all hover:bg-primary/20" style="height: 55%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-inverse-surface text-white text-[10px] px-2 py-1 rounded transition-opacity">$19k</div>
+</div>
+<div class="w-full bg-primary/40 rounded-t-lg relative group transition-all hover:bg-primary/50" style="height: 85%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-inverse-surface text-white text-[10px] px-2 py-1 rounded transition-opacity">$42k</div>
+</div>
+<div class="w-full bg-primary/10 rounded-t-lg relative group transition-all hover:bg-primary/20" style="height: 70%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-inverse-surface text-white text-[10px] px-2 py-1 rounded transition-opacity">$28k</div>
+</div>
+<div class="w-full bg-primary/60 rounded-t-lg relative group transition-all hover:bg-primary/70" style="height: 95%;">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-inverse-surface text-white text-[10px] px-2 py-1 rounded transition-opacity">$58k</div>
+</div>
+</div>
+<div class="flex justify-between px-4 mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+<span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -bottom-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+</div>
+<!-- Detailed Grid -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Staff Performance (The Curator Focus) -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-low p-1 rounded-2xl overflow-hidden">
+<div class="bg-surface-container-lowest p-8 rounded-2xl h-full">
+<div class="flex justify-between items-center mb-8">
+<h4 class="font-headline text-2xl">Excellence Metrics</h4>
+<a class="text-primary text-xs font-bold uppercase tracking-wider border-b-2 border-primary-fixed" href="#">Full Staff Audit</a>
+</div>
+<div class="space-y-6">
+<!-- Staff Item 1 -->
+<div class="flex items-center gap-6 group">
+<div class="w-14 h-14 rounded-xl overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+<img alt="Seraphina" class="w-full h-full object-cover" data-alt="close-up portrait of a serene female wellness therapist with minimalist jewelry and soft professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ0NyQb5--Ila0-GFo0ouxiyOB4comYV97cgJTGw0WBLh5vaTe22EmO1o4OJ1wJfjpcb_9taaqFD4fLDTaUhim2WmYBf5_v1kXGaJHDe1wDOKNxmlNQ70BoI3GNtQypoNVVCMwkcCNNhfarpg4c7Y7QxxrtXLp-6qA0yWpyeK0XgosTWb45ACYSLsRabam12leBmp7weQ74_rOXeIWfZHWR3hDhU20cu_mBqCDYAj-ahsOUGMDFruETH6GYPKD8MbvJS1_cLUjuJM"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline mb-1">
+<p class="font-medium text-lg">Seraphina Vance</p>
+<p class="text-secondary font-bold text-xs">Top Performer</p>
+</div>
+<div class="w-full h-1 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[94%]"></div>
+</div>
+<div class="flex justify-between mt-1">
+<span class="text-[10px] text-on-surface-variant font-bold uppercase">94% Retention</span>
+<span class="text-[10px] text-on-surface-variant font-bold uppercase">$12,400 Rev.</span>
+</div>
+</div>
+</div>
+<!-- Staff Item 2 -->
+<div class="flex items-center gap-6 group">
+<div class="w-14 h-14 rounded-xl overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+<img alt="Julian" class="w-full h-full object-cover" data-alt="portrait of a focused male skincare specialist in a clean bright studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8rmWc1tPhG8pXVef3-9SeQBWeEyKVyIhhPr7dOjuWI9eSfI5Exz-S3zHsW71V7um2LjHeuoekLhUAFluNNAjWDrb8UNgTehY2QfjYoiAe0wek2M5TTmXSziJ3uMFSXmVnmGOVz1xEBAqmBGzbgm3rGp774KfbflTOm6QbQMZh8cmZiN-n_TnxJen8txKbQSAX2FLERGLTK2e1tQUJGf6TMpGOPfdZw-HJmaFEW-qJH5fL1gKhwTEWHX8cssYgcN2S4_MUwNy68lU"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline mb-1">
+<p class="font-medium text-lg">Julian Kael</p>
+<p class="text-primary font-bold text-xs">High Booking Rate</p>
+</div>
+<div class="w-full h-1 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[82%]"></div>
+</div>
+<div class="flex justify-between mt-1">
+<span class="text-[10px] text-on-surface-variant font-bold uppercase">82% Retention</span>
+<span class="text-[10px] text-on-surface-variant font-bold uppercase">$9,800 Rev.</span>
+</div>
+</div>
+</div>
+<!-- Staff Item 3 -->
+<div class="flex items-center gap-6 group">
+<div class="w-14 h-14 rounded-xl overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+<img alt="Elena" class="w-full h-full object-cover" data-alt="professional portrait of a confident female medical aesthetician in a white lab coat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDARu1KonP5fn5T3Sly0NA3JOPBKz14jKvyzhSjpd8vT4Y8SSZD9-T005jx1MG67lp0spWvxV3aRwxNo2UWoCNgD3BgJZR7kyUo3M5XDF4__cX7yikY8O1LATrGwXvmikR0zrUJLKOnJdGnYC0LPWC3jhvuCQAq25tyGb3_DAyuuZeEY2YpZOWuj-2Z1S2E0ebL8Fwq0q1PTJT622InEfmlfjDZbnQoze00wE7lb5yKc06-yNXsMRbwDV7JLkhWicxUBkYIDClAFJg"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline mb-1">
+<p class="font-medium text-lg">Elena Rostova</p>
+<p class="text-on-surface-variant font-bold text-xs">Steady Growth</p>
+</div>
+<div class="w-full h-1 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-on-surface-variant w-[71%]"></div>
+</div>
+<div class="flex justify-between mt-1">
+<span class="text-[10px] text-on-surface-variant font-bold uppercase">71% Retention</span>
+<span class="text-[10px] text-on-surface-variant font-bold uppercase">$7,200 Rev.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Conversions Bento (The Intentional Asymmetry) -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<!-- Conversion Rate Widget -->
+<div class="bg-secondary-container p-8 rounded-2xl relative overflow-hidden group">
+<div class="relative z-10">
+<h4 class="text-on-secondary-container text-xs font-bold uppercase tracking-widest mb-6">Booking Conversion</h4>
+<div class="flex items-baseline gap-1">
+<span class="text-5xl font-headline italic text-on-secondary-container">42%</span>
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="trending_up">trending_up</span>
+</div>
+<p class="text-on-secondary-container/80 text-sm mt-4 leading-snug">Highest spike recorded since the 'Glow Collection' campaign launch.</p>
+</div>
+<!-- Abstract Glass Element -->
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-white/20 blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+</div>
+<!-- Market Insights -->
+<div class="bg-surface-container-low p-8 rounded-2xl">
+<h4 class="font-headline text-xl mb-6">Market Resonance</h4>
+<div class="space-y-4">
+<div class="flex justify-between items-center py-2 border-b border-outline-variant/10">
+<span class="text-xs text-on-surface-variant uppercase font-bold tracking-tight">Average Ticket</span>
+<span class="text-sm font-medium">$145.00</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-outline-variant/10">
+<span class="text-xs text-on-surface-variant uppercase font-bold tracking-tight">New Clients</span>
+<span class="text-sm font-medium">184</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-outline-variant/10">
+<span class="text-xs text-on-surface-variant uppercase font-bold tracking-tight">Cancellations</span>
+<span class="text-sm font-medium text-primary">2%</span>
+</div>
+<div class="flex justify-between items-center py-2">
+<span class="text-xs text-on-surface-variant uppercase font-bold tracking-tight">LTV Projection</span>
+<span class="text-sm font-medium">$2.4k</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Category Breakdown -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border-l-2 border-secondary">
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="face_retouching_natural">face_retouching_natural</span>
+<h5 class="font-headline text-xl mb-2">Facial Artistry</h5>
+<p class="text-on-surface-variant text-xs leading-relaxed mb-4">Driving 45% of total service revenue this quarter with high re-booking rates.</p>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold">+18%</span>
+<div class="flex-1 h-[2px] bg-secondary/10">
+<div class="h-full bg-secondary w-2/3"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border-l-2 border-primary">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="spa">spa</span>
+<h5 class="font-headline text-xl mb-2">Body Wellness</h5>
+<p class="text-on-surface-variant text-xs leading-relaxed mb-4">Steady performance in memberships, specifically within the restorative massage tier.</p>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold">+6%</span>
+<div class="flex-1 h-[2px] bg-primary/10">
+<div class="h-full bg-primary w-1/3"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border-l-2 border-on-surface-variant">
+<span class="material-symbols-outlined text-on-surface-variant mb-4" data-icon="content_cut">content_cut</span>
+<h5 class="font-headline text-xl mb-2">Hair Curations</h5>
+<p class="text-on-surface-variant text-xs leading-relaxed mb-4">Seasonal shift noted in color services; high demand for autumnal palettes.</p>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold">+22%</span>
+<div class="flex-1 h-[2px] bg-on-surface-variant/10">
+<div class="h-full bg-on-surface-variant w-4/5"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button (Suppressed on Analytics as per rule, but here for structural completeness if requested - hidden by default) -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-105 transition-transform hidden">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</body></html>
